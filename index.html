@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            html, body {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 0;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100vh;
+                background-color: #A2B1F9;
+            }
+
+            friendly-message {
+                padding: 40px;
+                font-size: 32px;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                color: #FFF;
+            }
+        </style>
+    </head>
+    <body>
+        <friendly-message>
+            No, they are not.
+        </friendly-message>
+    </body>
+    <script>
+        const possibleMessages = ['My sources indicate that they are not real.', 'No, the Coatimundi is too cute to be real.', 'Negative, that must cuteness cannot physically exist.', 'Nope, sorry, it is too cute.', 'Sadly, legally not.', 'Unfortunately not, sorry friend!', `That is a big ol' "no".`];
+        const randIdx = Math.floor(Math.random() * possibleMessages.length);
+        const randomMessage = possibleMessages[randIdx];
+        const friendlyMessage = document.querySelector('friendly-message');
+        friendlyMessage.innerHTML = randomMessage;
+    </script>
+</html>
